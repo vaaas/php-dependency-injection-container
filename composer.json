@@ -1,0 +1,27 @@
+{
+	"name": "vas/dependency-injection-container",
+	"description": "dead simple reflection-based dependency injection container",
+	"version": "1.0.0",
+	"type": "library",
+	"license": "AGPL3",
+	"autoload": {
+		"psr-4": {
+			"Vas\\DependencyInjectionContainer\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Vasileios Pasialiokis",
+			"email": "whiterocket@outlook.com"
+		}
+	],
+	"require-dev": {
+		"phpunit/phpunit": "^11.1",
+		"phpstan/phpstan": "^1.11",
+		"overtrue/phplint": "^9.3"
+	},
+	"scripts": {
+		"check": "./vendor/bin/phpstan analyse -l 9 src",
+		"test": "./vendor/bin/phpunit src"
+	}
+}
