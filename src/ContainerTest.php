@@ -69,6 +69,15 @@ class ContainerTest extends TestCase {
 		$result = $container->construct(DummyNested::class);
 		$this->assertInstanceOf(DummyNested::class, $result);
 	}
+
+	public function testScopedVsNonScoped(): void {
+		$container = new Container();
+		$a = $container->scoped()->construct(DummyNested::class);
+		$b = $container->construct(DummyNested::class);
+		$c = $container->construct(DummyNested::class);
+		$this->assertNotSame($a, $b);
+		$this->assertSame($b, $c);
+	}
 }
 
 interface DummyInterface {}

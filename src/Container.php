@@ -20,6 +20,10 @@ class Container {
 		private array $providers = [],
 	) {}
 
+	public function scoped(): Container {
+		return new Container($this->instances, $this->providers);
+	}
+
 	/**
 	 * @param class-string $class
 	 */
