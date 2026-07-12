@@ -30,6 +30,7 @@ class ContainerTest extends TestCase {
 		$container->provide(DummyInterface::class, fn() => $obj);
 		$resolved = $container->construct(DummyInterface::class);
 		$this->assertSame($obj, $resolved);
+		/** @phpstan-ignore-next-line */
 		$this->assertNotInstanceOf(DummyClass::class, $resolved);
 	}
 

@@ -1,36 +1,36 @@
 {
-	"name": "vas/dependency-injection-container",
-	"description": "dead simple reflection-based dependency injection container",
-	"version": "1.1.0",
-	"type": "library",
-	"license": "AGPL-3.0-or-later",
-	"autoload": {
-		"psr-4": {
-			"Vas\\DependencyInjectionContainer\\": "src/"
-		}
-	},
-	"authors": [
-		{
-			"name": "Vasileios Pasialiokis",
-			"email": "whiterocket@outlook.com"
-		}
-	],
-	"require": {
-		"php": ">=8.1"
-	},
-	"require-dev": {
-		"phpunit/phpunit": "^11.1",
-		"phpstan/phpstan": "^1.11",
-		"overtrue/phplint": "^9.3"
-	},
-	"scripts": {
-		"check": "./vendor/bin/phpstan analyse -l 9 src",
-		"test": "./vendor/bin/phpunit src"
-	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/vaaas/php-dependency-injection-container"
-		}
-	]
+  "name": "vas/dependency-injection-container",
+  "description": "dead simple reflection-based dependency injection container",
+  "version": "1.1.0",
+  "type": "library",
+  "license": "AGPL-3.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "Vas\\DependencyInjectionContainer\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Vasileios Pasialiokis",
+      "email": "whiterocket@outlook.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.1",
+    "phpstan/phpstan": "^2.2.5",
+    "overtrue/phplint": "^9.3"
+  },
+  "scripts": {
+    "check": "./vendor/bin/phpstan analyse -l 10 src",
+    "test": "./vendor/bin/phpunit src"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/vaaas/php-dependency-injection-container"
+    }
+  ]
 }

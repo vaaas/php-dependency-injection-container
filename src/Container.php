@@ -39,7 +39,7 @@ class Container {
 	public function provide(string $class, string | IProvider | callable $provider): Container {
 		if (is_callable($provider))
 			$this->providers[$class] = $provider;
-		else if (method_exists($provider, 'provide'))
+		else if (is_subclass_of($provider, IProvider::class))
 			$this->providers[$class] = $provider::provide(...);
 		else
 			/** @phpstan-ignore-next-line */

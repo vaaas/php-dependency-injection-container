@@ -1,0 +1,10 @@
+#!/bin/sh
+tag='php-di'
+
+cmd=$1
+shift 1
+
+case $cmd in
+    build) podman build -t $tag -f Containerfile . ;;
+    composer) podman run --rm -i -t -v ./:/app $tag composer "$@" ;;
+esac
